@@ -1,0 +1,13 @@
+ <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" style="background: #000">
+                <defs>
+                    <filter id="disp">
+                        <feTurbulence type="turbulence" baseFrequency="0.1 0.1" numOctaves="400" result="turbulence">
+                            <animate attributeName="baseFrequency" values="0.1 0.1;0.01 0.01;0.1 0.1" dur="30s" repeatCount="indefinite" />
+                        </feTurbulence>
+                        <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="50" xChannelSelector="R" yChannelSelector="G">
+                            <animate attributeName="scale" values="0;-120;0;120;0" dur="30s" repeatCount="indefinite" />
+                        </feDisplacementMap>
+                    </filter>
+                </defs>
+                <circle cx="500" filter="url(#disp)" cy="500" r="300" stroke-width="10" stroke="#fff" fill="none" />
+            </svg>
